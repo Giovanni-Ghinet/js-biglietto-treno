@@ -2,10 +2,10 @@ let km = parseFloat(prompt("Quanti km vuoi percorrere? (minimo 1 KM)"));
 let anni = parseInt(prompt("Età passeggero? (0-130)"));
 
 // Validazione km e età
-if (isNaN(km) || km < 1) {
+if (isNaN(km) && km > 1) {
     alert("Km non validi! Minimo 1 km. Ricarica e riprova.");
     console.log("Errore: km inferiori a 1");
-} else if (isNaN(anni) || anni < 0 || anni > 130) {
+} else if (isNaN(anni) && anni > 0 && anni < 130) {
     alert("Età non valida! (0-130 anni). Ricarica e riprova.");
     console.log("Errore: età fuori dal range");
 } else {
